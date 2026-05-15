@@ -49,7 +49,7 @@ The CMTA website is inaccessible to elderly users due to:
 | AI | OpenRouter API — google/gemini-2.0-flash-lite | ✅ Wired |
 | Frontend | Vanilla HTML + Tailwind CDN | ✅ Done |
 | Icons | Material Symbols Outlined (Google Fonts) | ✅ Done |
-| Mobile | PWA (manifest.json present, service worker TODO) | 🔄 Partial |
+| Mobile | PWA (manifest.json + service worker) | ✅ Done |
 | Server | Uvicorn | ✅ Running |
 
 ---
@@ -84,10 +84,8 @@ All endpoints live at http://localhost:8000
 | frontend/static/manifest.json | ✅ | PWA manifest |
 
 ### Known Issues / TODO
-- [ ] PWA service-worker.js not yet created (needed for offline + Android install)
 - [ ] Material Symbols icons may show as text on first load (font CDN delay) — workaround: hard refresh
 - [ ] Urdu toggle switches font/RTL but does NOT translate page text (no data-en/data-ur attributes added yet)
-- [ ] favicon.ico missing (404 in logs — cosmetic, not breaking)
 
 ---
 
@@ -186,7 +184,5 @@ Then open: http://localhost:8000
 ## Remaining Work (Priority Order)
 
 1. **Fix Urdu content translation** — add data-en/data-ur to key nav/heading elements, shared.js already reads them
-2. **PWA service worker** — service-worker.js for offline support + Android install prompt
-3. **favicon.ico** — stops 404 in server logs
-4. **Demo polish** — test all pages end-to-end, fix any edge cases
-5. **Presentation prep** — screenshots, demo flow, HCI justification writeup
+2. **Demo polish** — test all pages end-to-end, fix any edge cases
+3. **Presentation prep** — screenshots, demo flow, HCI justification writeup
