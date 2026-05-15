@@ -1,0 +1,14 @@
+{
+  "name": "Islamabad Metro — CMTA",
+  "short_name": "IslamabadMetro",
+  "description": "Elderly-friendly CMTA Metro Bus app for Islamabad",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcf9f8",
+  "theme_color": "#006B3C",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/static/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/static/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

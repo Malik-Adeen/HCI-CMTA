@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & Support — Islamabad Metro CMTA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Source+Serif+4:wght@600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="manifest" href="/static/manifest.json"/>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"/>
+  <link rel="stylesheet" href="/static/shared.css"/>
+  <style>
+    .material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;font-feature-settings:'liga' 1;-webkit-font-smoothing:antialiased;}
+    body{font-family:'Source Sans 3',sans-serif;background:#fcf9f8;color:#1c1b1b;}
+    .font-urdu{font-family:'Noto Nastaliq Urdu',serif;direction:rtl;}
+    *:focus-visible{outline:3px solid #D4500A;outline-offset:2px;border-radius:4px;}
+    .nav-link:hover,.nav-link.active{background:#e8f5ee;color:#00502c;}
+    .faq-answer{display:none;} .faq-item.open .faq-answer{display:block;} .faq-item.open .faq-chevron{transform:rotate(180deg);}
+    @media(max-width:768px){#nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:2px solid #006B3C;padding:1rem;z-index:99;}#nav-links.open{display:flex;}}
+  </style>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#00502c','primary-dark':'#003d21','primary-mid':'#006B3C','primary-light':'#e8f5ee',secondary:'#a63b00','secondary-light':'#fff0e8',tertiary:'#0b4586',surface:'#fcf9f8','surface-low':'#f6f3f2','surface-high':'#eae7e7','on-surface':'#1c1b1b','on-surface-muted':'#4a5568',outline:'#6f7a70','orange-line':'#D4500A'},fontFamily:{sans:['Source Sans 3','sans-serif'],serif:['Source Serif 4','serif']},fontSize:{'xs':['16px',{lineHeight:'24px'}],'sm':['18px',{lineHeight:'28px'}],'base':['20px',{lineHeight:'30px'}],'lg':['22px',{lineHeight:'32px'}],'xl':['28px',{lineHeight:'36px'}]},borderRadius:{card:'16px',btn:'12px'},minHeight:{touch:'56px'}}}}</script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<div class="bg-primary-dark text-white text-xs py-2 px-4">
+  <div class="max-w-6xl mx-auto flex items-center gap-2 font-semibold">
+    <span class="material-symbols-outlined text-base">phone</span>
+    <span data-en="Helpline:" data-ur="ہیلپ لائن:">Helpline:</span> <strong>051-2258066</strong> &nbsp;|&nbsp; <span data-en="Mon–Fri  9:00 AM – 12:00 AM" data-ur="پیر تا جمعہ  صبح ۹ بجے سے رات ۱۲ بجے تک">Mon–Fri &nbsp;9:00 AM – 12:00 AM</span>
+  </div>
+</div>
+
+<header class="bg-white border-b-2 border-primary-mid sticky top-0 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between min-h-touch gap-4">
+    <a href="/" class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-primary-mid rounded-xl flex items-center justify-center flex-shrink-0">
+        <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings:'FILL' 1">directions_bus</span>
+      </div>
+      <div>
+        <div class="font-serif font-bold text-xl text-primary leading-tight"><span data-en="Islamabad Metro" data-ur="اسلام آباد میٹرو">Islamabad Metro</span></div>
+        <div class="text-xs text-on-surface-muted font-semibold"><span data-en="Capital Mass Transit Authority" data-ur="کیپیٹل ماس ٹرانزٹ اتھارٹی">Capital Mass Transit Authority</span></div>
+      </div>
+    </a>
+    <nav id="nav-links" class="flex items-center gap-1 md:flex">
+      <a href="/" class="nav-link font-semibold text-sm px-4 py-2 rounded-btn text-on-surface transition-colors" data-en="Home" data-ur="گھر">Home</a>
+      <a href="/routes.html" class="nav-link font-semibold text-sm px-4 py-2 rounded-btn text-on-surface transition-colors" data-en="Routes" data-ur="روٹس">Routes</a>
+      <a href="/fares.html" class="nav-link font-semibold text-sm px-4 py-2 rounded-btn text-on-surface transition-colors" data-en="Fares" data-ur="کرایہ">Fares</a>
+      <a href="/timings.html" class="nav-link font-semibold text-sm px-4 py-2 rounded-btn text-on-surface transition-colors" data-en="Timings" data-ur="اوقات"><span data-en="Timings" data-ur="اوقات">Timings</span></a>
+      <a href="/help.html" class="nav-link active font-bold text-sm px-4 py-2 rounded-btn text-primary-mid transition-colors" data-en="Help" data-ur="مدد">Help</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="hidden md:flex items-center gap-1 bg-primary-light rounded-btn px-3 py-1">
+        <span class="text-xs font-bold text-primary">A</span>
+        <button onclick="changeFont(-1)" class="w-7 h-7 bg-primary-mid text-white rounded font-bold text-sm hover:bg-primary">−</button>
+        <button onclick="changeFont(1)"  class="w-7 h-7 bg-primary-mid text-white rounded font-bold text-sm hover:bg-primary">+</button>
+      </div>
+      <button id="lang-toggle" onclick="toggleLang()" class="hidden md:flex items-center px-3 border-2 border-outline rounded-btn text-sm font-bold text-primary hover:bg-primary-light min-h-touch">اردو</button>
+      <button class="md:hidden flex flex-col gap-1.5 p-2 border-2 border-primary-mid rounded-btn" onclick="document.getElementById('nav-links').classList.toggle('open')">
+        <span class="block w-5 h-0.5 bg-primary-mid"></span><span class="block w-5 h-0.5 bg-primary-mid"></span><span class="block w-5 h-0.5 bg-primary-mid"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow">
+
+<div class="bg-gradient-to-br from-primary-dark to-primary-mid text-white py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-xs font-extrabold tracking-widest uppercase text-green-300 mb-2" data-en="Support" data-ur="سپورٹ">Support</div>
+    <h1 class="font-serif text-2xl md:text-3xl font-bold mb-3" data-en="Help &amp; Support" data-ur="مدد اور سپورٹ">Help &amp; Support</h1>
+    <p class="text-base text-white/85 max-w-2xl" data-en="We're here to help you travel comfortably and confidently. Reach us by phone, use the AI assistant, or read our FAQ below." data-ur="ہم آپ کے آرام دہ اور پراعتماد سفر کے لیے حاضر ہیں۔ فون پر، اے آئی اسسٹنٹ سے، یا نیچے FAQ پڑھ کر مدد لیں۔">We're here to help you travel comfortably and confidently. Reach us by phone, use the AI assistant, or read our FAQ below.</p>
+  </div>
+</div>
+
+<div class="px-4 py-10">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Contact cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <a href="tel:0512258066" class="bg-white rounded-card border-2 border-surface-high p-6 flex flex-col items-center text-center gap-4 hover:border-primary-mid hover:shadow-md transition-all">
+        <div class="w-20 h-20 bg-primary-light rounded-full flex items-center justify-center text-4xl">📞</div>
+        <h2 class="font-serif font-bold text-xl text-on-surface" data-en="Call Helpline" data-ur="ہیلپ لائن پر کال کریں">Call Helpline</h2>
+        <p class="text-sm text-on-surface-muted" data-en="Speak with a real person. Available Monday to Friday." data-ur="کسی شخص سے بات کریں۔ پیر تا جمعہ">Speak with a real person. Available Monday to Friday.</p>
+        <div class="bg-primary-mid text-white font-bold text-base px-6 py-3 rounded-btn">051-2258066</div>
+        <div class="text-xs text-on-surface-muted">Mon–Fri &nbsp;9:00 AM – 12:00 AM</div>
+      </a>
+
+      <div class="bg-white rounded-card border-2 border-orange-line p-6 flex flex-col items-center text-center gap-4">
+        <div class="w-20 h-20 bg-secondary-light rounded-full flex items-center justify-center text-4xl">🤖</div>
+        <h2 class="font-serif font-bold text-xl text-on-surface" data-en="AI Assistant" data-ur="اے آئی اسسٹنٹ"><span data-en="AI Assistant" data-ur="اے آئی اسسٹنٹ">AI Assistant</span></h2>
+        <p class="text-sm text-on-surface-muted" data-en="Ask anything in Urdu or English — routes, fares, timings, and more." data-ur="اردو یا انگریزی میں کچھ بھی پوچھیں">Ask anything in Urdu or English — routes, fares, timings, and more.</p>
+        <button onclick="openChat()" class="bg-orange-line text-white font-bold text-base px-6 py-3 rounded-btn hover:bg-secondary transition-colors w-full" data-en="Start Chatting →" data-ur="چیٹ شروع کریں ←">Start Chatting →</button>
+        <div class="text-xs text-on-surface-muted" data-en="Available 24/7" data-ur="ہر وقت دستیاب">Available 24/7</div>
+      </div>
+
+      <a href="https://cmta.com.pk/customer-services/complaint/" class="bg-white rounded-card border-2 border-surface-high p-6 flex flex-col items-center text-center gap-4 hover:border-primary-mid hover:shadow-md transition-all">
+        <div class="w-20 h-20 bg-tertiary-light rounded-full flex items-center justify-center text-4xl">💬</div>
+        <h2 class="font-serif font-bold text-xl text-on-surface" data-en="Submit Feedback" data-ur="فیڈ بیک دیں">Submit Feedback</h2>
+        <p class="text-sm text-on-surface-muted" data-en="Share your experience, suggestions, or complaints." data-ur="اپنا تجربہ، تجاویز یا شکایت شیئر کریں">Share your experience, suggestions, or complaints.</p>
+        <div class="bg-primary-mid text-white font-bold text-base px-6 py-3 rounded-btn w-full text-center">Give Feedback →</div>
+        <div class="text-xs text-on-surface-muted">Via official CMTA portal</div>
+      </a>
+    </div>
+
+    <!-- Full AI Chat Panel (embedded on help page) -->
+    <div class="bg-white rounded-card border-2 border-primary-mid overflow-hidden mb-12">
+      <div class="bg-primary-mid text-white px-6 py-4 flex items-center gap-3">
+        <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">smart_toy</span>
+        <div>
+          <div class="font-bold text-lg"><span data-en="Metro AI Assistant" data-ur="میٹرو اے آئی اسسٹنٹ">Metro AI Assistant</span></div>
+          <div class="text-sm text-green-200"><span data-en="Ask in Urdu or English — I know all routes, fares, and timings" data-ur="اردو یا انگریزی میں پوچھیں — میں تمام روٹس اور اوقات جانتا ہوں">Ask in Urdu or English — I know all routes, fares, and timings</span></div>
+        </div>
+      </div>
+      <div id="help-chat-messages" class="p-6 flex flex-col gap-4 bg-surface-low overflow-y-auto" style="min-height:300px;max-height:400px;">
+        <div class="bg-white border border-surface-high text-on-surface text-base rounded-xl px-5 py-4 max-w-xl self-start shadow-sm">
+          <div class="font-bold text-primary mb-1 flex items-center gap-2">
+            <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">smart_toy</span>
+            AI Assistant
+          </div>
+          السلام علیکم! میں آپ کا میٹرو اسسٹنٹ ہوں۔ روٹ، کرایہ یا اوقات کے بارے میں پوچھیں۔<br/>
+          <em class="text-sm text-on-surface-muted">Hello! I can help with routes, fares, timings, and any metro-related questions. Ask me anything!</em>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="quickAsk('How do I get from PIMS to Airport?')" class="text-xs bg-white border-2 border-surface-high px-3 py-2 rounded-full font-semibold text-on-surface hover:border-primary-mid transition-colors"><span data-en="PIMS to Airport?" data-ur="پمز سے ائیرپورٹ تک؟">PIMS to Airport?</span></button>
+          <button onclick="quickAsk('What is the fare from Saddar to Secretariat?')" class="text-xs bg-white border-2 border-surface-high px-3 py-2 rounded-full font-semibold text-on-surface hover:border-primary-mid transition-colors"><span data-en="Saddar to Secretariat fare?" data-ur="صدر سے سیکرٹریٹ کا کرایہ؟">Saddar to Secretariat fare?</span></button>
+          <button onclick="quickAsk('What time does the first bus start?')" class="text-xs bg-white border-2 border-surface-high px-3 py-2 rounded-full font-semibold text-on-surface hover:border-primary-mid transition-colors"><span data-en="First bus timing?" data-ur="پہلی بس کا وقت؟">First bus timing?</span></button>
+          <button onclick="quickAsk('How do I get a senior citizen card?')" class="text-xs bg-white border-2 border-surface-high px-3 py-2 rounded-full font-semibold text-on-surface hover:border-primary-mid transition-colors"><span data-en="Senior citizen card?" data-ur="سینئر سٹیزن کارڈ؟">Senior citizen card?</span></button>
+        </div>
+      </div>
+      <div class="border-t-2 border-surface-high p-4 flex gap-3 bg-white">
+        <input id="help-chat-input" type="text" placeholder="Type your question here… (Urdu or English)"
+          class="flex-1 border-2 border-surface-high rounded-xl px-5 py-3 text-base focus:border-primary-mid outline-none min-h-touch"
+          onkeydown="if(event.key==='Enter')sendHelpChat()"/>
+        <button onclick="sendHelpChat()" class="px-6 bg-primary-mid text-white rounded-xl font-bold text-base hover:bg-primary transition-colors flex items-center gap-2 min-h-touch">
+          <span class="material-symbols-outlined">send</span> Send
+        </button>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div>
+      <h2 class="font-serif text-xl font-bold text-on-surface mb-6" data-en="Frequently Asked Questions" data-ur="اکثر پوچھے گئے سوالات">Frequently Asked Questions</h2>
+      <div class="flex flex-col gap-3" id="faq-list">
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer class="bg-gray-900 text-gray-400 py-8 px-4 mt-auto">
+  <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4 text-xs">
+    <span class="font-bold text-white text-sm"><span data-en="Islamabad Metro" data-ur="اسلام آباد میٹرو">Islamabad Metro</span></span>
+    <p><span data-en="© 2025 Capital Mass Transit Authority (CMTA). All Rights Reserved." data-ur="© 2025 کیپیٹل ماس ٹرانزٹ اتھارٹی۔ جملہ حقوق محفوظ ہیں۔">© 2025 Capital Mass Transit Authority (CMTA). All Rights Reserved.</span></p>
+    <a href="tel:0512258066" class="text-green-400 font-bold">📞 051-2258066</a>
+  </div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  class="fixed bottom-6 right-6 w-14 h-14 bg-primary-mid text-white rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity z-40 hover:bg-primary">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<!-- Floating chat button (links to embedded chat on this page) -->
+<div onclick="openChat()" title="AI Assistant"
+  class="fixed bottom-6 left-6 z-50 w-16 h-16 bg-orange-line text-white rounded-full shadow-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors">
+  <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">smart_toy</span>
+</div>
+
+<script>
+const API='http://localhost:8000';
+let isUrdu=false; let fontSize=16; let helpChatHistory=[];
+window.addEventListener('scroll',()=>{const b=document.getElementById('back-top');const s=window.scrollY>400;b.style.opacity=s?'1':'0';b.style.pointerEvents=s?'auto':'none';});
+
+function openChat(){document.getElementById('help-chat-messages').scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('help-chat-input').focus();}
+
+const FAQS = [
+  {q:'<span data-en="How do I buy a ticket?" data-ur="میں ٹکٹ کیسے خرید سکتا ہوں؟">How do I buy a ticket?</span>', a:'You can buy a single-use token at any metro station ticket counter or from the vending machines. For regular travel, a Metro Card is more convenient and cheaper — apply at any station with your CNIC.'},
+  {q:'<span data-en="What is the fare for a senior citizen?" data-ur="سینئر سٹیزن کا کرایہ کیا ہے؟">What is the fare for a senior citizen?</span>', a:'Currently CMTA does not have an officially published senior discount programme. However, a senior citizen card initiative has been announced — check with your nearest metro station or call 051-2258066 for the latest information.'},
+  {q:'<span data-en="Is the Pink Bus really free?" data-ur="کیا پنک بس واقعی مفت ہے؟">Is the Pink Bus really free?</span>', a:'Yes. The Pink Bus Service is completely free of charge for all female passengers. No ticket or card is needed. It operates daily on designated routes.'},
+  {q:'<span data-en="How do I find which line goes to my destination?" data-ur="میری منزل پر کونسی لائن جاتی ہے، میں کیسے تلاش کروں؟">How do I find which line goes to my destination?</span>', a:'Use the Route Finder on this website, or ask our AI Assistant (the orange button on this page). You can also call the helpline at 051-2258066 and a staff member will guide you.'},
+  {q:'<span data-en="Are the buses wheelchair accessible?" data-ur="کیا بسوں میں وہیل چیئر کی سہولت موجود ہے؟">Are the buses wheelchair accessible?</span>', a:'Yes. All CMTA metro buses and major stations are equipped with wheelchair ramps, accessible turnstiles, and priority seating for elderly and disabled passengers.'},
+  {q:'<span data-en="What if I lose something on the bus?" data-ur="اگر میں بس میں کوئی چیز بھول جاؤں تو کیا کروں؟">What if I lose something on the bus?</span>', a:'Contact the CMTA helpline immediately at 051-2258066, or visit the nearest metro station and speak to a staff member. You can also file a report via the CMTA website at cmta.com.pk.'},
+  {q:'<span data-en="Can I use a Metro Card on all lines?" data-ur="کیا میں تمام لائنوں پر میٹرو کارڈ استعمال کر سکتا ہوں؟">Can I use a Metro Card on all lines?</span>', a:'The Metro Card (e-ticketing) is fully operational on the Orange Line and Red Line (BRT). The Green and Blue lines are still working on a standardized ticketing system. Check the station for current payment options.'},
+  {q:'<span data-en="How often do buses run?" data-ur="بسیں کتنی دیر بعد آتی ہیں؟">How often do buses run?</span>', a:'During peak hours (morning 7-9:30 AM and evening 4:30-7:30 PM), buses run every 5-8 minutes. During off-peak hours, frequency is every 10-15 minutes depending on the line.'},
+];
+
+function buildFAQ(){
+  const list=document.getElementById('faq-list');
+  list.innerHTML=FAQS.map((f,i)=>`
+    <div class="faq-item bg-white rounded-card border-2 border-surface-high overflow-hidden">
+      <button onclick="toggleFAQ(${i})" class="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-surface-low transition-colors min-h-touch">
+        <span class="font-bold text-sm text-on-surface pr-4">${f.q}</span>
+        <span class="material-symbols-outlined text-primary-mid flex-shrink-0 faq-chevron transition-transform">expand_more</span>
+      </button>
+      <div class="faq-answer px-6 pb-5 text-sm text-on-surface-muted leading-relaxed border-t border-surface-high pt-4">${f.a}</div>
+    </div>`).join('');
+}
+function toggleFAQ(i){document.querySelectorAll('.faq-item')[i].classList.toggle('open');}
+
+async function sendHelpChat(){
+  const input=document.getElementById('help-chat-input'); const msg=input.value.trim(); if(!msg)return;
+  input.value=''; appendHelpMsg(msg,'user'); appendHelpMsg('…','bot','typing');
+  helpChatHistory.push({role:'user',content:msg});
+  try{
+    const lang = typeof CMTA !== 'undefined' ? CMTA.getLang() : (isUrdu?'ur':'en');
+    const res=await fetch(`${API}/api/ai/chat`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,language:lang,history:helpChatHistory.slice(-6)})});
+    document.querySelector('.typing')?.remove();
+    if(!res.ok){
+      const err=await res.json().catch(()=>({}));
+      appendHelpMsg(lang==='ur'?'معذرت، سروس وقتی طور پر دستیاب نہیں۔ براہ کرم 051-2258066 پر کال کریں۔':`Sorry, AI service unavailable. Please call 051-2258066. (${err.detail||res.status})`,'bot');
+      return;
+    }
+    const data=await res.json(); appendHelpMsg(data.reply||'...','bot');
+    helpChatHistory.push({role:'assistant',content:data.reply});
+  }catch(e){document.querySelector('.typing')?.remove(); appendHelpMsg('Sorry, could not connect to AI. Please try calling 051-2258066.','bot');}
+}
+
+function quickAsk(q){document.getElementById('help-chat-input').value=q; sendHelpChat();}
+
+function appendHelpMsg(text,role,cls=''){
+  const box=document.getElementById('help-chat-messages'); const el=document.createElement('div');
+  const isBot=role==='bot';
+  el.className=`text-sm rounded-xl px-5 py-4 max-w-xl ${cls} ${isBot?'bg-white border border-surface-high text-on-surface self-start shadow-sm':'bg-primary-mid text-white self-end ml-auto'}`;
+  if(isBot&&!cls){el.innerHTML=`<div class="font-bold text-primary mb-1 flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1">smart_toy</span><span data-en="AI Assistant" data-ur="اے آئی اسسٹنٹ">AI Assistant</span></div>${text}`;}
+  else{el.textContent=text;}
+  box.appendChild(el); box.scrollTop=box.scrollHeight;
+}
+
+buildFAQ();
+</script>
+<!-- PWA INSTALL BANNER -->
+<div id="pwa-install-banner" class="hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-dark text-white px-4 py-3 flex items-center justify-between gap-3 shadow-2xl border-t-2 border-primary-mid">
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 bg-primary-mid rounded-xl flex items-center justify-center flex-shrink-0">
+      <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL' 1">directions_bus</span>
+    </div>
+    <div>
+      <div class="font-bold text-sm" data-en="Install Islamabad Metro App" data-ur="اسلام آباد میٹرو ایپ انسٹال کریں">Install Islamabad Metro App</div>
+      <div class="text-xs text-green-200" data-en="Add to home screen for quick access" data-ur="ہوم اسکرین پر شامل کریں">Add to home screen for quick access</div>
+    </div>
+  </div>
+  <div class="flex items-center gap-2 flex-shrink-0">
+    <button onclick="cmtaInstallApp()" class="bg-orange-line text-white font-bold text-sm px-4 py-2 rounded-btn hover:bg-secondary transition-colors" data-en="Install" data-ur="انسٹال کریں">Install</button>
+    <button onclick="document.getElementById('pwa-install-banner').classList.add('hidden')" class="text-white/60 hover:text-white p-1" aria-label="Dismiss"><span class="material-symbols-outlined text-base">close</span></button>
+  </div>
+</div>
+
+<script src="/static/shared.js"></script>
+</body>
+</html>

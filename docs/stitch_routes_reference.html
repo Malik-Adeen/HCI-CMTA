@@ -1,0 +1,148 @@
+<!-- Stitch-generated Route Finder page — saved as reference.
+     Source: stitch.withgoogle.com output, May 2025
+     Used as: visual/layout reference for routes.html rebuild -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Route Finder - Metro Transport Authority</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success-green": "#006B3C",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#006b3c",
+                        "on-surface": "#1c1b1b",
+                        "background": "#fcf9f8",
+                        "outline": "#6f7a70",
+                        "secondary": "#a63b00",
+                        "surface-container": "#f0eded",
+                        "primary": "#00502c",
+                        "on-primary": "#ffffff",
+                        "surface-base": "#FFFFFF",
+                        "on-surface-variant": "#3f4941",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container-highest": "#e5e2e1",
+                        "outline-variant": "#bec9be",
+                        "orange-line": "#D4500A",
+                        "green-line": "#006B3C",
+                        "blue-line": "#00529B"
+                    },
+                    "borderRadius": {
+                        "card": "16px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "touch-target-min": "56px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontSize": {
+                        "body-lg": ["22px", { "lineHeight": "32px" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-lg": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "body-md": ["20px", { "lineHeight": "30px" }],
+                        "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "60px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fcf9f8; color: #1c1b1b; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.fill-icon { font-variation-settings: 'FILL' 1; }
+        *:focus-visible { outline: 3px solid #ff6f2e; outline-offset: 2px; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<header class="bg-surface-container-low border-b-2 border-outline w-full top-0 z-50">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<span class="text-headline-lg font-bold tracking-tight text-primary">Metro Transport Authority</span>
+</div>
+<nav aria-label="Main Navigation" class="flex flex-wrap justify-center gap-6">
+<a aria-current="page" class="text-primary border-b-4 border-primary pb-1 font-bold text-label-lg hover:bg-surface-container-high transition-all min-h-touch-target-min flex items-center px-2" href="#">Route Finder</a>
+<a class="text-on-surface-variant font-medium text-label-lg hover:bg-surface-container-high transition-all min-h-touch-target-min flex items-center px-2" href="#">Schedules</a>
+<a class="text-on-surface-variant font-medium text-label-lg hover:bg-surface-container-high transition-all min-h-touch-target-min flex items-center px-2" href="#">Fares</a>
+<a class="text-on-surface-variant font-medium text-label-lg hover:bg-surface-container-high transition-all min-h-touch-target-min flex items-center px-2" href="#">Accessibility</a>
+</nav>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-16">
+<section class="flex flex-col gap-4 text-center md:text-left">
+<h1 class="text-display-lg text-on-surface">Route Finder</h1>
+<p class="text-body-lg text-on-surface-variant max-w-3xl">Select a metro line to view its complete route, stations, and available accessibility facilities. We are committed to providing a comfortable and dignified journey for all.</p>
+</section>
+<section aria-label="Metro Lines" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<button aria-pressed="true" class="flex items-center justify-between p-6 bg-surface-base border-4 border-[#D4500A] rounded-card min-h-[100px] hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-center gap-4">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-[#D4500A] flex-shrink-0"></div>
+<span class="text-headline-md text-on-surface">Orange Line</span>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-[#D4500A]">directions_bus</span>
+</button>
+<button aria-pressed="false" class="flex items-center justify-between p-6 bg-surface-base border-2 border-outline rounded-card min-h-[100px] hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-center gap-4">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-[#006B3C] flex-shrink-0"></div>
+<span class="text-headline-md text-on-surface">Green Line</span>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-outline">directions_bus</span>
+</button>
+<button aria-pressed="false" class="flex items-center justify-between p-6 bg-surface-base border-2 border-outline rounded-card min-h-[100px] hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-center gap-4">
+<div aria-hidden="true" class="w-8 h-8 rounded-full bg-[#00529B] flex-shrink-0"></div>
+<span class="text-headline-md text-on-surface">Blue Line</span>
+</div>
+<span aria-hidden="true" class="material-symbols-outlined text-outline">directions_bus</span>
+</button>
+</section>
+<section class="bg-surface-base border-2 border-outline rounded-card p-6 md:p-10 flex flex-col gap-10">
+<div class="border-b-2 border-outline pb-6">
+<h2 class="text-headline-md text-on-surface flex items-center gap-3">
+<div aria-hidden="true" class="w-4 h-4 rounded-full bg-[#D4500A]"></div>
+Orange Line Overview
+</h2>
+<p class="text-body-lg text-on-surface-variant mt-2">Connecting Pak Secretariat to Faizabad. Operating daily from 6:00 AM to 10:00 PM.</p>
+</div>
+<div class="flex flex-col relative before:absolute before:inset-y-0 before:left-[23px] before:w-1 before:bg-[#D4500A] before:z-0 gap-8">
+<div class="relative z-10 flex items-start gap-6 group cursor-pointer">
+<div class="w-12 h-12 rounded-full border-4 border-[#D4500A] bg-surface-base flex items-center justify-center flex-shrink-0 mt-1">
+<div class="w-4 h-4 rounded-full bg-[#D4500A]"></div>
+</div>
+<div class="flex-grow bg-surface-base border-2 border-outline rounded p-6 group-hover:bg-surface-container-low transition-colors flex flex-col md:flex-row justify-between md:items-center gap-4 min-h-touch-target-min">
+<div>
+<h3 class="text-headline-md text-on-surface">Pak Secretariat</h3>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="bg-[#00529B] text-white text-label-lg px-3 py-1 rounded inline-flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 18px;">swap_horiz</span> Interchange: Blue Line
+</span>
+</div>
+</div>
+<div class="flex gap-4 text-primary">
+<span aria-hidden="true" class="material-symbols-outlined fill-icon" title="Elevator">elevator</span>
+<span aria-hidden="true" class="material-symbols-outlined fill-icon" title="Wheelchair Ramp">accessible</span>
+<span aria-hidden="true" class="material-symbols-outlined fill-icon" title="Washroom">wc</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-highest border-t-2 border-outline w-full mt-16">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<p class="text-body-md text-on-surface-variant text-center">© 2025 Capital Mass Transit Authority (CMTA). Ensuring dignified mobility for all citizens.</p>
+</div>
+</footer>
+</body></html>

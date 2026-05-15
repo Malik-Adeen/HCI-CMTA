@@ -1,0 +1,70 @@
+/* ── Custom Select Styling ────────────────────────────────────────── */
+/* !important needed to override Tailwind CDN preflight + utility classes */
+
+select,
+select.appearance-none {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23006B3C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 20px !important;
+  border: 2px solid #d1d5db !important;
+  border-radius: 12px !important;
+  padding: 12px 48px 12px 16px !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: #1c1b1b !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  width: 100% !important;
+  line-height: 1.5 !important;
+  box-shadow: none !important;
+}
+
+select:hover {
+  border-color: #006B3C !important;
+}
+
+select:focus {
+  outline: none !important;
+  border-color: #006B3C !important;
+  box-shadow: 0 0 0 3px rgba(0, 107, 60, 0.15) !important;
+}
+
+select option {
+  font-size: 17px;
+  padding: 8px 12px;
+  color: #1c1b1b;
+  background: #fff;
+}
+
+/* ── RTL for Urdu mode ───────────────────────────────────────────── */
+[dir="rtl"] select {
+  background-position: left 14px center !important;
+  padding: 12px 16px 12px 48px !important;
+  text-align: right !important;
+}
+
+/* ── Urdu body font override ─────────────────────────────────────── */
+body.font-urdu,
+body.font-urdu p,
+body.font-urdu h1,
+body.font-urdu h2,
+body.font-urdu h3,
+body.font-urdu span:not(.material-symbols-outlined),
+body.font-urdu a,
+body.font-urdu button:not(.material-symbols-outlined),
+body.font-urdu label,
+body.font-urdu div:not(.material-symbols-outlined) {
+  font-family: 'Noto Nastaliq Urdu', serif !important;
+  line-height: 2 !important;
+}
+
+body.font-urdu .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  line-height: 1 !important;
+}
