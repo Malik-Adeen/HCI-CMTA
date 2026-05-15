@@ -49,12 +49,17 @@ if os.path.isdir(STATIC_DIR):
 @app.get("/service-worker.js")
 def serve_service_worker():
     if os.path.isfile(SERVICE_WORKER_PATH):
-        return FileResponse(SERVICE_WORKER_PATH, media_type="application/javascript")
+        return FileResponse(
+            SERVICE_WORKER_PATH,
+            media_type="application/javascript",
+            headers={"Cache-Control": "no-cache"},
+        )
     return JSONResponse({"message": "service-worker.js not found"}, status_code=404)
 
 
 @app.get("/favicon.ico")
 def serve_favicon():
+    # Prefer favicon.ico if provided; fall back to the SVG used by the frontend.
     if os.path.isfile(FAVICON_ICO_PATH):
         return FileResponse(FAVICON_ICO_PATH)
     if os.path.isfile(FAVICON_SVG_PATH):
