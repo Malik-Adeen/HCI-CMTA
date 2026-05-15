@@ -2,7 +2,7 @@
 
 ## Prerequisites
 - Python 3.11+
-- PostgreSQL running locally
+- SQLite (bundled with Python) or PostgreSQL if you want a remote DB
 
 ## First-time setup
 
@@ -20,9 +20,9 @@ pip install -r requirements.txt
 
 # 4. Create your .env file
 copy .env.example .env
-# Then open .env and fill in your PostgreSQL password and OpenRouter key
+# Then open .env and fill in your OpenRouter key (and DATABASE_URL if using PostgreSQL)
 
-# 5. Create the database in PostgreSQL
+# 5. (Optional) Create the database in PostgreSQL if you set DATABASE_URL
 # Open psql or pgAdmin and run:
 # CREATE DATABASE cmta_db;
 
@@ -50,7 +50,7 @@ backend/
 ├── app/
 │   ├── main.py         FastAPI entry point
 │   ├── config.py       Settings from .env
-│   ├── database.py     PostgreSQL connection
+│   ├── database.py     SQLAlchemy connection (SQLite by default)
 │   ├── models.py       SQLAlchemy ORM models
 │   ├── schemas.py      Pydantic request/response schemas
 │   ├── seed_data.py    Real CMTA data seed
