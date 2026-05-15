@@ -11,6 +11,7 @@ D:\HCI-Final\  (connected via Filesystem MCP)
 - Database: Seeded with real CMTA data (6 lines, 50+ stations, fares, alerts).
 - AI: OpenRouter wired (google/gemini-2.0-flash-lite). /api/ai/chat and /api/ai/route working.
 - Frontend: 5 pages done (index, routes, fares, timings, help). Tailwind CDN. All pages fetch from API.
+- PWA: service worker in place and served by backend; offline/install ready.
 - Shared: static/shared.js handles language + font size persistence via localStorage. static/shared.css handles custom select styling.
 
 ## How to start the backend
@@ -22,9 +23,7 @@ uvicorn app.main:app --reload --port 8000
 
 ## What is NOT done yet (priority order)
 1. Urdu content translation — shared.js reads data-en/data-ur attributes but they haven't been added to HTML elements yet. Currently toggle only switches font/RTL direction, doesn't translate text.
-2. PWA service-worker.js — needed for Android install prompt + offline mode.
-3. favicon.ico — cosmetic 404 in server logs.
-4. Final demo polish and end-to-end testing.
+2. Final demo polish and end-to-end testing.
 
 ## Key files to read before making changes
 - D:\HCI-Final\docs\PROJECT_CONTEXT.md — full project state, file structure, API contract

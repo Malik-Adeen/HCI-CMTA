@@ -37,10 +37,36 @@ FRONTEND_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "..", "frontend")
 )
 STATIC_DIR = os.path.join(FRONTEND_DIR, "static")
+SERVICE_WORKER_PATH = os.path.join(FRONTEND_DIR, "service-worker.js")
+FAVICON_ICO_PATH = os.path.join(FRONTEND_DIR, "favicon.ico")
+FAVICON_SVG_PATH = os.path.join(STATIC_DIR, "favicon.svg")
 
 # Mount static files if folder exists
 if os.path.isdir(STATIC_DIR):
     app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+
+
+@app.get("/service-worker.js")
+def serve_service_worker():
+    if os.path.isfile(SERVICE_WORKER_PATH):
+        return FileResponse(
+            SERVICE_WORKER_PATH,
+            media_type="application/javascript",
+            headers={
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+        )
+    return JSONResponse({"message": "service-worker.js not found"}, status_code=404)
+
+
+@app.get("/favicon.ico")
+def serve_favicon():
+    # Prefer favicon.ico if provided; fall back to the SVG used by the frontend.
+    if os.path.isfile(FAVICON_ICO_PATH):
+        return FileResponse(FAVICON_ICO_PATH)
+    if os.path.isfile(FAVICON_SVG_PATH):
+        return FileResponse(FAVICON_SVG_PATH, media_type="image/svg+xml")
+    return JSONResponse({"message": "favicon not found"}, status_code=404)
 
 
 @app.get("/health")
