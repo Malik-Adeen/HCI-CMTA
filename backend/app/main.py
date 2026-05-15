@@ -52,7 +52,9 @@ def serve_service_worker():
         return FileResponse(
             SERVICE_WORKER_PATH,
             media_type="application/javascript",
-            headers={"Cache-Control": "no-cache, no-store, must-revalidate"},
+            headers={
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate"
+            },
         )
     return JSONResponse({"message": "service-worker.js not found"}, status_code=404)
 
